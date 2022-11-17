@@ -11,13 +11,26 @@
     --hero-button-active: #188CE8;
 }
 
-.page {
+body {
     background-color: var(--body-background-color);
     color: var(--primary-text-color);
-    font-family: Roboto, serif;
+    font-family: Roboto, sans-serif;
 }
 
-a {
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.link {
     text-decoration: none;
 }
 
@@ -29,7 +42,7 @@ list-style: none;
 
 .logo-header {
     color: var(--logo-primary-color);
-    font-family: Raleway, serif;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -38,10 +51,9 @@ list-style: none;
 
 .logo-color {
     color: var(--logo-secondary-color);
-    font-family: Raleway, serif;
 }
 
-.site-nav a {
+.site-nav .link {
     color: var(--headers-color);
     font-weight: 500;
     font-size: 14px;
@@ -49,16 +61,16 @@ list-style: none;
     letter-spacing: 0.02em;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
+.site-nav .link:hover,
+.site-nav .link:focus {
     color: var(--logo-secondary-color);
 }
 
-.site-nav a.current {
+.site-nav .link.current {
     color: var(--logo-secondary-color);
 }
 
-.contacts-header a {
+.contacts-header .link {
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -66,8 +78,8 @@ list-style: none;
     letter-spacing: 0.02em;
 }
 
-.contacts-header a:hover,
-.contacts-header a:focus {
+.contacts-header .link:hover,
+.contacts-header .link:focus {
     color: var(--logo-secondary-color);
 }
 
@@ -79,14 +91,14 @@ list-style: none;
 
 .logo-footer {
     color: var(--secondary-text-color);
-    font-family: Raleway, serif;
+    font-family: Raleway, sans-serif;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     }
 
-.contacts-footer a {
+.contacts-footer .link {
     color: var(--footer-contacts-color);
     font-style: normal;
     font-size: 14px;
@@ -94,12 +106,12 @@ list-style: none;
     letter-spacing: 0.03em;
 }
 
-.contacts-footer a:hover,
-.contacts-footer a:focus {
+.contacts-footer .link:hover,
+.contacts-footer .link:focus {
     color: var(--logo-secondary-color);
 }
 
-.contacts-address a {
+.contacts-address .link {
     color: var(--secondary-text-color);
 }
 
@@ -116,15 +128,16 @@ list-style: none;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
+    text-transform: uppercase;
 }
 
 .hero-button {
     color: var(--secondary-text-color);
     background-color: var(--logo-secondary-color);
-    font-family: Roboto, serif;
+    font-family: Roboto, sans-serif;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.87;
     letter-spacing: 0.06em;
     cursor: pointer;
 }
@@ -144,7 +157,7 @@ list-style: none;
     letter-spacing: 0.03em;
 }
 
-.feature-list .title {
+.feature-title {
     color: var(--headers-color);
     font-weight: 700;
     font-size: 14px;
@@ -152,13 +165,13 @@ list-style: none;
     letter-spacing: 0.03em;
 }
 
-.feature-list p {
+.feature-content {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
-.work-list li {
+.work-item {
 text-align: center;
 }
 
@@ -166,18 +179,14 @@ text-align: center;
     background-color: var(--secondary-background-color);
 }
 
-.team-list .title {
+.team-title {
     color: var(--headers-color);
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.9;
-    text-align: center;
-    letter-spacing: 0.03em;
 }
 
-.team-list li {
+.team-item {
     font-size: 16px;
-    line-height: 1.9;
+    line-height: 1.87;
     text-align: center;
     letter-spacing: 0.03em;
     background-color: var(--body-background-color);
@@ -185,7 +194,7 @@ text-align: center;
 
 /*----------------------MAIN PORTFOLIO----------------------*/
 
-.example-list .title {
+.example-title {
     color: var(--headers-color);
     font-weight: 700;
     font-size: 18px;
@@ -193,7 +202,8 @@ text-align: center;
     letter-spacing: 0.06em;
 }
 
-.example-list p {
+.example-item {
+    color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
@@ -203,7 +213,7 @@ text-align: center;
 .portfolio-button {
     background-color: var(--secondary-background-color);
     color: var(--headers-color);
-    font-family: Roboto, serif;
+    font-family: Roboto, sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -216,5 +226,5 @@ text-align: center;
 .portfolio-button:focus {
     color: var(--secondary-text-color);
     background-color: var(--logo-secondary-color);
-    font-family: Roboto, serif;
+    font-family: Roboto, sans-serif;
 }
